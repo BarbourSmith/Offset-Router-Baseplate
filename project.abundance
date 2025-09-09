@@ -26,8 +26,8 @@
         {
             "atomType": "Molecule",
             "name": "MoleculePlate",
-            "x": 0.3419312169312169,
-            "y": 0.34818941504178275,
+            "x": 0.34391534391534395,
+            "y": 0.36211699164345407,
             "uniqueID": "a14d5497-bd61-45c8-b562-2bec7f1f3e91",
             "ioValues": [],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -66,13 +66,13 @@
                 {
                     "atomType": "Extrude",
                     "name": "Extrude",
-                    "x": 0.2585978835978836,
-                    "y": 0.4428969359331476,
+                    "x": 0.3082010582010582,
+                    "y": 0.31197771587743733,
                     "uniqueID": "b9089329-4e78-430e-a4e1-f54d3e19695a",
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": "c71895aa-bc07-4a10-b5e7-a89cdada1c69",
+                            "ioValue": "ee4cbedc-d703-482f-a62c-da64386b3320",
                             "currentEquation": null
                         },
                         {
@@ -464,14 +464,49 @@
                     "tags": [
                         "Plastic"
                     ]
+                },
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.1316137566137566,
+                    "y": 0.777158774373259,
+                    "uniqueID": "4825fd06-59fa-431b-a24a-362fda05c813",
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 8,
+                            "currentEquation": "8"
+                        }
+                    ],
+                    "description": "Creates a new circle."
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.21164021164021166,
+                    "y": 0.5821727019498607,
+                    "uniqueID": "ee4cbedc-d703-482f-a62c-da64386b3320",
+                    "ioValues": [
+                        {
+                            "name": "geometry1",
+                            "ioValue": "c71895aa-bc07-4a10-b5e7-a89cdada1c69",
+                            "currentEquation": null
+                        },
+                        {
+                            "name": "geometry2",
+                            "ioValue": "4825fd06-59fa-431b-a24a-362fda05c813",
+                            "currentEquation": null
+                        }
+                    ],
+                    "description": "Subtracts shape two from shape one."
                 }
             ],
             "allConnectors": [
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "geometry",
+                    "ap2Name": "geometry1",
                     "ap1ID": "c71895aa-bc07-4a10-b5e7-a89cdada1c69",
-                    "ap2ID": "b9089329-4e78-430e-a4e1-f54d3e19695a"
+                    "ap2ID": "ee4cbedc-d703-482f-a62c-da64386b3320"
                 },
                 {
                     "ap1Name": "geometry",
@@ -496,6 +531,18 @@
                     "ap2Name": "geometry1",
                     "ap1ID": "fa639d6b-5efb-46b2-8138-f7e58dcdd9d8",
                     "ap2ID": "b01fa45c-e866-4b01-a303-4c2995fb8d05"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry2",
+                    "ap1ID": "4825fd06-59fa-431b-a24a-362fda05c813",
+                    "ap2ID": "ee4cbedc-d703-482f-a62c-da64386b3320"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap1ID": "ee4cbedc-d703-482f-a62c-da64386b3320",
+                    "ap2ID": "b9089329-4e78-430e-a4e1-f54d3e19695a"
                 }
             ],
             "fileTypeVersion": 1,
@@ -740,7 +787,7 @@
                     "ioValue": "a14d5497-bd61-45c8-b562-2bec7f1f3e91"
                 },
                 {
-                    "name": "Shape 2",
+                    "name": "Shape 3",
                     "ioValue": "0ea992ed-1723-4ca6-980e-9651b2291d90"
                 }
             ],
@@ -762,40 +809,6 @@
             "description": "Extracts geometry containing the specified tag.",
             "tag": "Plastic",
             "tagIndex": 0
-        },
-        {
-            "atomType": "Export",
-            "name": "Export",
-            "x": 0.7850529100529101,
-            "y": 0.28690807799442897,
-            "uniqueID": "f7900b42-9135-470c-adf0-ade16a514357",
-            "ioValues": [
-                {
-                    "name": "geometry",
-                    "ioValue": "75a70a73-5646-401c-8712-773391ae270a",
-                    "currentEquation": null
-                },
-                {
-                    "name": "File Type",
-                    "ioValue": "STL",
-                    "currentEquation": null
-                },
-                {
-                    "name": "Resolution (dpi)",
-                    "ioValue": 96,
-                    "currentEquation": null
-                },
-                {
-                    "name": "Part Name",
-                    "ioValue": "Offset Router Baseplate",
-                    "currentEquation": null
-                }
-            ],
-            "description": "Export Atom, let's you choose a type of file to Export.",
-            "type": "STL",
-            "resolution": 96,
-            "importIndex": 0,
-            "partName": "Offset Router Baseplate"
         }
     ],
     "allConnectors": [
@@ -807,7 +820,7 @@
         },
         {
             "ap1Name": "geometry or number",
-            "ap2Name": "Shape 2",
+            "ap2Name": "Shape 3",
             "ap1ID": "0ea992ed-1723-4ca6-980e-9651b2291d90",
             "ap2ID": "69dd2465-5105-497f-8e09-b1781d45e5e9"
         },
@@ -822,12 +835,6 @@
             "ap2Name": "geometry",
             "ap1ID": "69dd2465-5105-497f-8e09-b1781d45e5e9",
             "ap2ID": "75a70a73-5646-401c-8712-773391ae270a"
-        },
-        {
-            "ap1Name": "output",
-            "ap2Name": "geometry",
-            "ap1ID": "75a70a73-5646-401c-8712-773391ae270a",
-            "ap2ID": "f7900b42-9135-470c-adf0-ade16a514357"
         }
     ],
     "unitsKey": "MM",
