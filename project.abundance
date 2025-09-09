@@ -51,7 +51,7 @@
                 {
                     "atomType": "Circle",
                     "name": "Circle",
-                    "x": 0.24603174603174605,
+                    "x": 0.12698412698412698,
                     "y": 0.415041782729805,
                     "uniqueID": "c71895aa-bc07-4a10-b5e7-a89cdada1c69",
                     "ioValues": [
@@ -66,8 +66,8 @@
                 {
                     "atomType": "Extrude",
                     "name": "Extrude",
-                    "x": 0.41865079365079366,
-                    "y": 0.41782729805013924,
+                    "x": 0.2585978835978836,
+                    "y": 0.4428969359331476,
                     "uniqueID": "b9089329-4e78-430e-a4e1-f54d3e19695a",
                     "ioValues": [
                         {
@@ -436,7 +436,7 @@
                     "ioValues": [
                         {
                             "name": "geometry1",
-                            "ioValue": "b9089329-4e78-430e-a4e1-f54d3e19695a",
+                            "ioValue": "fa639d6b-5efb-46b2-8138-f7e58dcdd9d8",
                             "currentEquation": null
                         },
                         {
@@ -446,6 +446,24 @@
                         }
                     ],
                     "description": "Subtracts shape two from shape one."
+                },
+                {
+                    "atomType": "Tag",
+                    "name": "Plastic",
+                    "x": 0.42394179894179895,
+                    "y": 0.415041782729805,
+                    "uniqueID": "fa639d6b-5efb-46b2-8138-f7e58dcdd9d8",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "b9089329-4e78-430e-a4e1-f54d3e19695a",
+                            "currentEquation": null
+                        }
+                    ],
+                    "description": "Tags geometry so that it can be extracted later.",
+                    "tags": [
+                        "Plastic"
+                    ]
                 }
             ],
             "allConnectors": [
@@ -457,9 +475,9 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "geometry1",
+                    "ap2Name": "geometry",
                     "ap1ID": "b9089329-4e78-430e-a4e1-f54d3e19695a",
-                    "ap2ID": "b01fa45c-e866-4b01-a303-4c2995fb8d05"
+                    "ap2ID": "fa639d6b-5efb-46b2-8138-f7e58dcdd9d8"
                 },
                 {
                     "ap1Name": "geometry or number",
@@ -472,6 +490,12 @@
                     "ap2Name": "number or geometry",
                     "ap1ID": "b01fa45c-e866-4b01-a303-4c2995fb8d05",
                     "ap2ID": "acfb2f48-f823-419b-a873-0022de19c41e"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry1",
+                    "ap1ID": "fa639d6b-5efb-46b2-8138-f7e58dcdd9d8",
+                    "ap2ID": "b01fa45c-e866-4b01-a303-4c2995fb8d05"
                 }
             ],
             "fileTypeVersion": 1,
@@ -555,8 +579,8 @@
                 {
                     "atomType": "Extrude",
                     "name": "Extrude",
-                    "x": 0.49074074074074076,
-                    "y": 0.33147632311977715,
+                    "x": 0.5138888888888888,
+                    "y": 0.2618384401114206,
                     "uniqueID": "0494122a-f662-4e0e-9039-00ebca01b340",
                     "ioValues": [
                         {
@@ -616,15 +640,33 @@
                     "uniqueID": "9a30d6d9-ecdf-46a7-a2e9-1016e6e50e05",
                     "ioValues": [
                         {
-                            "name": "Shape 1",
-                            "ioValue": "0494122a-f662-4e0e-9039-00ebca01b340"
+                            "name": "Shape 2",
+                            "ioValue": "2009eec5-f521-455a-a407-7ccfff6d424e"
                         },
                         {
-                            "name": "Shape 2",
+                            "name": "Shape 3",
                             "ioValue": "cb13139b-4521-4a3b-96e9-7a8f09389c70"
                         }
                     ],
                     "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
+                },
+                {
+                    "atomType": "Tag",
+                    "name": "Plastic",
+                    "x": 0.6203703703703703,
+                    "y": 0.27298050139275765,
+                    "uniqueID": "2009eec5-f521-455a-a407-7ccfff6d424e",
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "0494122a-f662-4e0e-9039-00ebca01b340",
+                            "currentEquation": null
+                        }
+                    ],
+                    "description": "Tags geometry so that it can be extracted later.",
+                    "tags": [
+                        "Plastic"
+                    ]
                 }
             ],
             "allConnectors": [
@@ -654,9 +696,9 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "Shape 1",
+                    "ap2Name": "geometry",
                     "ap1ID": "0494122a-f662-4e0e-9039-00ebca01b340",
-                    "ap2ID": "9a30d6d9-ecdf-46a7-a2e9-1016e6e50e05"
+                    "ap2ID": "2009eec5-f521-455a-a407-7ccfff6d424e"
                 },
                 {
                     "ap1Name": "geometry",
@@ -666,7 +708,7 @@
                 },
                 {
                     "ap1Name": "color",
-                    "ap2Name": "Shape 2",
+                    "ap2Name": "Shape 3",
                     "ap1ID": "cb13139b-4521-4a3b-96e9-7a8f09389c70",
                     "ap2ID": "9a30d6d9-ecdf-46a7-a2e9-1016e6e50e05"
                 },
@@ -675,6 +717,12 @@
                     "ap2Name": "number or geometry",
                     "ap1ID": "9a30d6d9-ecdf-46a7-a2e9-1016e6e50e05",
                     "ap2ID": "ade586da-b6e9-4fed-a80a-d70434665ef0"
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Shape 2",
+                    "ap1ID": "2009eec5-f521-455a-a407-7ccfff6d424e",
+                    "ap2ID": "9a30d6d9-ecdf-46a7-a2e9-1016e6e50e05"
                 }
             ],
             "fileTypeVersion": 1,
@@ -683,8 +731,8 @@
         {
             "atomType": "Assembly",
             "name": "Assembly",
-            "x": 0.5648148148148149,
-            "y": 0.48467966573816157,
+            "x": 0.5171957671957672,
+            "y": 0.43732590529247906,
             "uniqueID": "69dd2465-5105-497f-8e09-b1781d45e5e9",
             "ioValues": [
                 {
@@ -699,15 +747,32 @@
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
         },
         {
-            "atomType": "Export",
-            "name": "Export",
-            "x": 0.7156084656084657,
-            "y": 0.23119777158774377,
-            "uniqueID": "e035622e-f6cb-43b7-9115-ee71779063eb",
+            "atomType": "ExtractTag",
+            "name": "Extract Tag",
+            "x": 0.6613756613756614,
+            "y": 0.2924791086350975,
+            "uniqueID": "75a70a73-5646-401c-8712-773391ae270a",
             "ioValues": [
                 {
                     "name": "geometry",
                     "ioValue": "69dd2465-5105-497f-8e09-b1781d45e5e9",
+                    "currentEquation": null
+                }
+            ],
+            "description": "Extracts geometry containing the specified tag.",
+            "tag": "Plastic",
+            "tagIndex": 0
+        },
+        {
+            "atomType": "Export",
+            "name": "Export",
+            "x": 0.7850529100529101,
+            "y": 0.28690807799442897,
+            "uniqueID": "f7900b42-9135-470c-adf0-ade16a514357",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "75a70a73-5646-401c-8712-773391ae270a",
                     "currentEquation": null
                 },
                 {
@@ -756,7 +821,13 @@
             "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap1ID": "69dd2465-5105-497f-8e09-b1781d45e5e9",
-            "ap2ID": "e035622e-f6cb-43b7-9115-ee71779063eb"
+            "ap2ID": "75a70a73-5646-401c-8712-773391ae270a"
+        },
+        {
+            "ap1Name": "output",
+            "ap2Name": "geometry",
+            "ap1ID": "75a70a73-5646-401c-8712-773391ae270a",
+            "ap2ID": "f7900b42-9135-470c-adf0-ade16a514357"
         }
     ],
     "unitsKey": "MM",
