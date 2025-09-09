@@ -7,10 +7,48 @@
     "ioValues": [],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": "37294bde-6dc7-4603-b3b7-3947a7497b38",
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "2d12424a-01c3-4cd9-a4f9-0fa996876d24",
+                    "currentEquation": null
+                }
+            ],
+            "description": "Connect geometry here to make it available in the next level up. "
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.3988095238095238,
+            "y": 0.5041782729805014,
+            "uniqueID": "2d12424a-01c3-4cd9-a4f9-0fa996876d24",
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 10,
+                    "currentEquation": null
+                }
+            ],
+            "description": "Creates a new circle."
+        }
+    ],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap1ID": "2d12424a-01c3-4cd9-a4f9-0fa996876d24",
+            "ap2ID": "37294bde-6dc7-4603-b3b7-3947a7497b38"
+        }
+    ],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
-    "compiledBom": {},
+    "compiledBom": [],
     "filetypeVersion": 1
 }
