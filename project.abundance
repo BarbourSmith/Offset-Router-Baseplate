@@ -809,6 +809,40 @@
             "description": "Extracts geometry containing the specified tag.",
             "tag": "Plastic",
             "tagIndex": 0
+        },
+        {
+            "atomType": "Export",
+            "name": "Export",
+            "x": 0.798941798941799,
+            "y": 0.33983286908078,
+            "uniqueID": "2706d201-cdfb-4f11-8efe-a1b92b75f836",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "75a70a73-5646-401c-8712-773391ae270a",
+                    "currentEquation": null
+                },
+                {
+                    "name": "File Type",
+                    "ioValue": "STL",
+                    "currentEquation": null
+                },
+                {
+                    "name": "Resolution (dpi)",
+                    "ioValue": 96,
+                    "currentEquation": null
+                },
+                {
+                    "name": "Part Name",
+                    "ioValue": "Offset Router Baseplate",
+                    "currentEquation": null
+                }
+            ],
+            "description": "Export Atom, let's you choose a type of file to Export.",
+            "type": "STL",
+            "resolution": 96,
+            "importIndex": 0,
+            "partName": "Offset Router Baseplate"
         }
     ],
     "allConnectors": [
@@ -835,6 +869,12 @@
             "ap2Name": "geometry",
             "ap1ID": "69dd2465-5105-497f-8e09-b1781d45e5e9",
             "ap2ID": "75a70a73-5646-401c-8712-773391ae270a"
+        },
+        {
+            "ap1Name": "output",
+            "ap2Name": "geometry",
+            "ap1ID": "75a70a73-5646-401c-8712-773391ae270a",
+            "ap2ID": "2706d201-cdfb-4f11-8efe-a1b92b75f836"
         }
     ],
     "unitsKey": "MM",
